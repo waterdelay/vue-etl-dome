@@ -2,7 +2,7 @@
  * @Author       : daiwei
  * @Date         : 2021-05-21 19:05:16
  * @LastEditors  : daiwei
- * @LastEditTime : 2021-05-22 19:07:53
+ * @LastEditTime : 2021-05-24 10:48:51
  * @FilePath     : \vue-etl-dome\src\App.vue
 -->
 <template>
@@ -16,7 +16,6 @@
   width: 100vw;
   height: 100%;
   margin: 0;
-  text-align: center;
   color: #2c3e50;
 }
 
