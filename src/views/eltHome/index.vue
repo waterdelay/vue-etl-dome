@@ -2,7 +2,7 @@
  * @Author       : daiwei
  * @Date         : 2021-05-22 17:15:37
  * @LastEditors  : daiwei
- * @LastEditTime : 2021-05-24 18:09:52
+ * @LastEditTime : 2021-05-24 18:31:07
  * @FilePath     : \vue-etl-dome\src\views\eltHome\index.vue
 -->
 <template>
@@ -37,7 +37,7 @@
       </el-tree>
     </div>
     <div class="box-content">
-        <div class="content"></div>
+        <div class="content" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div class="journal">
             <el-tabs type="card">
                 <el-tab-pane>
@@ -159,6 +159,14 @@ export default {
     handleDragend (draggingNode, endNode, position, event) {
         console.log(draggingNode, endNode,position,event,'handleDragend')
     },
+    drop(ev){
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+    },
+    allowDrop(ev){
+        ev.preventDefault();
+    }
   }
 };
 </script>
