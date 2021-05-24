@@ -2,7 +2,7 @@
  * @Author       : daiwei
  * @Date         : 2021-05-22 16:00:54
  * @LastEditors  : daiwei
- * @LastEditTime : 2021-05-22 19:21:11
+ * @LastEditTime : 2021-05-24 10:14:51
  * @FilePath     : \vue-etl-dome\vue.config.js
  */
 const path = require("path");
@@ -27,7 +27,14 @@ module.exports = {
       return args
     })
   },
-
+  css: {
+    loaderOptions: {
+       sass: {
+        //  prependData:`@import "./src/assets/scss/style.scss";` 
+         // sass 版本 9 中使用 additionalData 版本 8 中使用 prependData  
+        }
+      }
+  },
   // 是否为 Babel 或 TypeScript 使用 thread-loader。该选项在系统的 CPU 有多于一个内核时自动启用，仅作用于生产构建。
   parallel: require('os').cpus().length > 1,
   devServer: {
